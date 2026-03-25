@@ -42,18 +42,22 @@
 - `test_extract_proper_noun_stress.py`
   Небольшой набор регрессионных тестов.
 
-## С чего начинать
+## Как применять в TTS
 
-Если нужен просто готовый словарь без долгого разбора, обычно стоит смотреть в таком порядке:
+Рекомендую применять словари строго в таком порядке:
 
 1. `PyDictionaries/all_proper_nouns_priority_full_names.py`
 2. `PyDictionaries/all_proper_nouns_observed_single_variant.py`
+
 3. `PyDictionaries/all_proper_nouns_observed_most_frequent.py`
-4. `PyDictionaries/all_proper_nouns_observed_generated.py`
+Словарь с фамилиями и именами, где есть разные варианты ударений.
+Этот словарь поставит самую распространённую форму.
+
+4. `PyDictionaries/all_proper_nouns_observed_generated.py` (НЕ РЕКОМЕНДУЕТСЯ)
+Сгенерированные через pymorphy3 другие формы слов. Могут быть ошибки.
+Если нужен максимально осторожный каскад, можно остановиться на первых трёх файлах и не использовать `generated`.
 
 То же самое есть в формате `.dic` в папке `DemagogDictionaries/`.
-
-Если нужен максимально осторожный каскад, можно остановиться на первых трёх файлах и не использовать `generated`.
 
 ## Как читать названия словарей
 
@@ -114,20 +118,6 @@ all_proper_nouns_observed = {
 - принято прочих имён собственных: `138,195`
 - пропущено страниц без ударения в заголовке: `930,939`
 - пропущено как не-имена собственные: `891,018`
-
-## Какие файлы чаще всего нужны
-
-- `PyDictionaries/all_proper_nouns_observed_single_variant.py`
-  Один из самых надёжных общих словарей.
-
-- `PyDictionaries/all_proper_nouns_observed_most_frequent.py`
-  Хороший широкий словарь, если нужен практичный дефолт.
-
-- `PyDictionaries/all_proper_nouns_priority_full_names.py`
-  Полезно применять раньше общих словарей, чтобы корректнее обрабатывать полные имена.
-
-- `DemagogDictionaries/all_proper_nouns_observed_most_frequent.dic`
-  Удобный стартовый файл для систем, которым нужен формат `key=value`.
 
 ## Как пересобрать словари
 
