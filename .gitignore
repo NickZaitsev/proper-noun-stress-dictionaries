@@ -1,0 +1,5 @@
+ruwiki-latest-pages-articles.xml
+*.xml.bz2
+__pycache__/
+*.pyc
+stress_output_*/

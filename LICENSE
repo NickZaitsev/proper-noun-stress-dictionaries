@@ -1,0 +1,14 @@
+This repository uses split licensing.
+
+Code
+- Unless stated otherwise, scripts and tests in this repository are licensed under the MIT License.
+- See `LICENSE-MIT`.
+
+Data
+- Dictionary files and derived data in `PyDictionaries/` and `DemagogDictionaries/` are licensed under CC BY-SA 4.0.
+- These files are derived from Russian Wikipedia content and should be treated as adapted material requiring attribution and share-alike.
+- See `LICENSE-DATA`.
+
+Attribution note
+- Source material: Russian Wikipedia (`ruwiki`) dump processed by the scripts in this repository.
+- If you redistribute or adapt the dictionary data, keep attribution to Wikipedia/Wikimedia contributors, indicate that the data was modified, and preserve the CC BY-SA 4.0 license or a compatible BY-SA license.
